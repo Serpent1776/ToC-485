@@ -27,7 +27,7 @@ public class AutomatonDriver {
             if(response.equals("STOP")) {
                 end = true; //program temination in process
             }
-            //linked-list mannerisms
+            robotGraph.simulate(response);
             System.out.println("YES!");
             responder.next();
             } catch(Exception e) {
@@ -40,3 +40,6 @@ public class AutomatonDriver {
     
     
 }
+ /*
+  * Citation if need be for oracle for char:
+  */
