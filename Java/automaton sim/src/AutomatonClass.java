@@ -32,23 +32,38 @@ public class AutomatonClass{
         
         //will have formatting errors from the file alone.  
         this.len = txtFile.nextInt();
-        System.out.print(txtFile.nextLine()); //debugging
+        //System.out.print(txtFile.nextLine()); //debugging
         this.alphabetLen = txtFile.nextInt();
-        System.out.print(txtFile.nextLine()); //debugging
+        //System.out.print(txtFile.nextLine()); //debugging
         this.alphabet = txtFile.nextLine().toCharArray(); //takes string and turns it into an char array of String x.length(). 
-       this.transitions = new int[alphabetLen][len];
-       int countr = 0; //front!
-       for(int i = 0; (txtFile.nextLine().equals("")) ;i++) { //state storage loop, I hope I don't need to explain this
-       Integer a = new Integer(txtFile.nextInt()); //the integer storage glitch will be debugged inevitably.
-       countr++;
-        this.transitions[i%(alphabetLen+1)][countr] = a.intValue(); //O(log n)?
-       }
+       this.transitions = new int[alphabetLen][len + 1];
+       for(int i = 0; !(txtFile.nextLine().equals("") || txtFile.nextLine() == null); i++) { 
+        //state storage loop, I hope I don't need to explain the condition
+        int countr = 0;
+        String s = ""; 
+        String[] strArr = s.split(txtFile.nextLine().trim(), 2*alphabetLen - 1);
+        String[] strArr2 = new String[alphabetLen];
+        int var2 = 0;
+        int odder = 1;
+        while(var2 != alphabetLen) { 
+        strArr2[var2] = strArr[odder];
+        var2 += 1;
+        odder += 2;
+            }
+      
+        for(int u = 0; u < alphabetLen; u++) { //box loop!
+           Integer a = new Integer(strArr2[u]);
+        this.transitions[countr][u] = a.intValue();
+        }
+        countr++; //rows!
+    }
+        
     }
 
     public void linkUpStates() throws AutomatonException {
         //will have ban cases if it is broken by the simulation being an NFA such will have exceptions
         //the linked stuff will have what's in the node class
-
+        
 
     }
     public void simulate(String test) throws AutomatonException { 

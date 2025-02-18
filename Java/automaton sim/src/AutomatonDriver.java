@@ -1,7 +1,7 @@
 import java.io.File;
 import java.util.Scanner;
 public class AutomatonDriver {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         try { //setup
         Scanner scanFile = new Scanner(new File("Java\\automaton sim\\src\\sample1.txt"));
         Scanner responder = new Scanner(System.in);
@@ -11,6 +11,7 @@ public class AutomatonDriver {
         } catch(Exception e) { //errors during setup involve formatting
             System.out.print(e.getMessage()); //meant for debugging
             System.out.print("File is not correctly formated");
+            throw e;
         }
     }
     public static void simulation(AutomatonClass robotGraph, Scanner responder) { //simulate the automaton with a text Scanner
@@ -31,7 +32,7 @@ public class AutomatonDriver {
             System.out.println("YES!");
             responder.next();
             } catch(Exception e) {
-                System.out.print(e.getMessage()); //meant for debugging
+                //System.out.print(e.getMessage()); //meant for debugging
                 System.out.println("NO!"); 
             }
         } 
