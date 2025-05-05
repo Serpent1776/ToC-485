@@ -111,7 +111,7 @@ public class PushDownAutomation {
         }
     }   
 
-    public void addTransitions(String[] transStr) throws PDAException {//adds the transitions between states, info selected by a string
+    public void addTransition(String[] transStr) throws PDAException {//adds the transitions between states, info selected by a string
         if(this.start == null) {throw new PDAException("Error: have an INITAL state please.");} //inital check
         if(transStr[3].length() == 1 || !(transStr[3].equals("LAMBDA"))) { //appropiate read string check
             if(transStr[3].length() == 1) { //goes into a lang check when it's obviously a char
