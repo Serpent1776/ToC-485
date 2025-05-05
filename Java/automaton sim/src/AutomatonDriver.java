@@ -9,7 +9,7 @@ public class AutomatonDriver {
         simulation(robot, responder);
         responder.close();
         } catch(Exception e) { //errors during setup involve formatting
-            System.out.print(e.getMessage()); //meant for debugging
+            //System.out.print(e.getMessage()); //meant for debugging
             System.out.print("File is not correctly formated");
             throw e;
         }

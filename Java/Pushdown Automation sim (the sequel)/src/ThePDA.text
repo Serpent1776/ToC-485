@@ -1,0 +1,28 @@
+6
+abc
+INITAL; 0; 0; 5; 3
+5; 5; 4; 2
+3; 3; 1; 4
+1; 1; 4; 5
+2; 2; 3; 4
+FINAL; 4
+transition; 0; 0; c; LAMBDA; LAMBDA
+transition; 0; 5; a; LAMBDA; A
+transition; 0; 3; b; LAMBDA; B
+transition; 5; 4; LAMBDA; AZ; LAMBDA
+transition; 5; 2; b; A; LAMBDA
+transition; 5; 5; c; LAMBDA; LAMBDA
+transition; 5; 5; a; LAMBDA; A
+transition; 3; 1; a; B; LAMBDA
+transition; 3; 4; LAMBDA; AZ; LAMBDA
+transition; 3; 3; c; LAMBDA; LAMBDA
+transition; 3; 3; b; LAMBDA; B
+transition; 1; 5; a; Z; AZ
+transition; 1; 4; LAMBDA; AZ; LAMBDA
+transition; 1; 1; a; B; LAMBDA
+transition; 1; 1; c; LAMBDA; LAMBDA
+transition; 2; 3; b; Z; BZ
+transition; 2; 4; LAMBDA; AZ; LAMBDA
+transition; 2; 2; b; A; LAMBDA
+transition; 2; 2; c; LAMBDA; LAMBDA
+end
