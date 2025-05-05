@@ -6,7 +6,7 @@ public class PDADriver {
         try {
         
         //Part One: Initalization
-        Scanner fileScanner = new Scanner(new File("src\\ThePDA.txt")); //change this to the path for your PDA simulation txt
+        Scanner fileScanner = new Scanner(new File("Java\\Pushdown Automation sim (the sequel)\\src\\ThePDA.txt")); //change this to the path for your PDA simulation txt
         //make sure the follow ThePDA syntax and Notes to allow my program to do its work.
         Scanner user = new Scanner(System.in);
         ArrayList<String> fileBox = new ArrayList<String>();//the file's box
